@@ -60,21 +60,25 @@ http.createServer(function (req, res) {
    });
     } else {
       //css
-      res.write('<meta name="viewport" content="width=device-width, initial-scale=1.0">')
       res.write('<style>')
-      res.write('body {background-image: linear-gradient(to bottom right, red, blue); font: Fantasy; color: white; text-align: center; font-size: 60%;   font-weight: 60%; }')
-      res.write(' h1 { font-size: 100%; }')
-      res.write('@media only screen and (min-width: 768px) {   .col-1 {width: 8.33%;}  }')
+      res.write('body {background-color: black; background-image: linear-gradient(to bottom right, red, blue); font: Arial; color: white; text-align: center; font-weight: 100%; font-size: 250%; text-align: center !important;}')
+      res.write(' h2 { font-size: 2hw; }')
+      res.write(' h1 { font-size: 8hw; }')
+      res.write(' button { text-align: center; color: white; font-size: 30vw; }')
+      res.write (' form {  font-size: 110%; text-align: center;   padding: 32px 62px;      }')
+      res.write (' input {  font-size: 110%; text-align: center; }')
+      res.write('@media only screen and (min-width: 768px) {   .col-1 {width: 26.33%;}  }')
       res.write(' [class*="col-"] {width: 100%; ')
       res.write('</style>")')
       //html
       res.write("<h1> Fontoes </h1>")
-      res.write("<p> Enter file: </p> ")
+      res.write("<h2> 'Upload files to your PC from your phone!' </h2> ")
       res.write('<form action="fileupload" method="post" enctype="multipart/form-data">');
       res.write('<input type="file" name="filetoupload"><br>');
+      res.write('<br>')
       res.write('<input type="submit">');
       res.write('</form>');
-
+      res.write('<br>')
     }
   }).listen(porthere, iplol);
 

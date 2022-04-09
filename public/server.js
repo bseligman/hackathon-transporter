@@ -61,7 +61,7 @@ http.createServer(function (req, res) {
     } else {
       //css
       res.write('<style>')
-      res.write('body {background-color: black; background-image: linear-gradient(to bottom right, red, blue); font: Arial; color: white; text-align: center; font-weight: 100%; font-size: 250%; text-align: center !important;}')
+      res.write('body {background-color: black; background-image: linear-gradient(to bottom right, red, blue); font: Arial; color: white; text-align: center; font-weight: 100%; font-size: 250%; text-align: center !important;}   background-repeat: none;      ')
       res.write(' h2 { font-size: 2hw; }')
       res.write(' h1 { font-size: 8hw; }')
       res.write(' button { text-align: center; color: white; font-size: 30vw; }')
@@ -72,7 +72,8 @@ http.createServer(function (req, res) {
       res.write('</style>")')
       //html
       res.write("<h1> Fontoes </h1>")
-      res.write("<h2> 'Upload files to your PC from your phone!' </h2> ")
+      res.write("<h2> Upload files from your Fon-toe your PC! </h2> ")
+      res.write("<p> Note: Please only upload if a file is selected!!")
       res.write('<form action="fileupload" method="post" enctype="multipart/form-data">');
       res.write('<input type="file" name="filetoupload"><br>');
       res.write('<br>')
